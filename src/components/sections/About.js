@@ -27,6 +27,9 @@ align-items: center;
 @media (max-width: 54em){ 
   flex-direction: column;
 }
+@media (max-width: 34em){
+  width: 90%;
+}
 
 `
 const Box = styled.div`

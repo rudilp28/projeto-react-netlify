@@ -69,6 +69,17 @@ img {
   .swiper-pagination{
     bottom: 0px!important;
   }
+  img {
+    width: 85%;
+  }
+}
+@media (max-width: 24em){
+  width: 55vw;
+  height: 45vh;
+
+  .swiper-pagination{
+    bottom: 0px!important;
+  }
 }
 `
 
@@ -80,7 +91,7 @@ const TextPhoto = styled.p`
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10;
-    margin: 2px auto;
+    margin: 5px auto;
 `
 
 const Carousel = () => {
