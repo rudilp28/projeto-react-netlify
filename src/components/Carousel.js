@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { ReactComponent as MenuToggle } from '../assets/heart-svg.svg';
 
 import { Pagination , Navigation, Autoplay, EffectCards } from "swiper";
 
