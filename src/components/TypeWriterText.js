@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
+import mySound from '../assets/music.mp3';
+import { ReactComponent as Pause } from '../assets/pause-button.svg';
+import { Howl } from 'howler'
 
 const Title = styled.h2`
   font-size: ${props => props.theme.fontxxxl};
@@ -90,10 +93,56 @@ transition: all 0.2s ease;
 }
 `
 
+const PauseButton =  styled.button`
+display: inline-block;
+background-color: ${props => props.theme.buttonpause};
+color: ${props => props.theme.body};
+outline: none;
+border: none;
+
+font-size: ${props => props.theme.fontsm};
+margin-left: 10px;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.2s ease;
+
+&:hover{
+    transform: scale(0.9);
+}
+
+&::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 2px solid ${props => props.theme.text};
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: all 0.2 ease;
+}
+&:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+    padding: 0.3rem;
+}
+
+@media (max-width: 54em){
+    width: 100%;
+}
+@media (max-width: 34em){
+    width: 40px;
+    height: 40px;
+}
+`
+
   
 const ButtonContainer = styled.div`
   width: 80%;
-  align-self: flex-start;
+  align-self: baseline;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
   @media (max-width: 54em){
     align-self: center;
   } 
@@ -111,6 +160,12 @@ const TypeWriterText = () => {
     })
   }
 
+    const sound =  new Howl({
+        src:[mySound],
+        html5: true,
+        preload: true,
+    })
+    
 
   return (
    <>
@@ -141,8 +196,9 @@ const TypeWriterText = () => {
     <SubTitle>
     Arrasta pra paixo para saber mais!
   </SubTitle>
-  <ButtonContainer>
-    <ArrowButton onClick={() => scrollTo('about')}>proceguir</ArrowButton>
+  <ButtonContainer className='aqui'>
+    <ArrowButton onClick={() => {scrollTo('about') ; sound.play() }}>proceguir</ArrowButton>
+    <PauseButton onClick={() => sound.pause() }><Pause style={{ width: '30px', height: '35px' }} /></PauseButton>
   </ButtonContainer>
   </>
   )

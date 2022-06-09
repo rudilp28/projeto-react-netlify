@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import CoverVideo from '../CoverVideo';
 import TypeWriterText from '../TypeWriterText';
 
+
 const Section = styled.div`
 min-height: 100vh;
 width: 100vw;

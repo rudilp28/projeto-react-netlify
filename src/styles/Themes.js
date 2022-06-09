@@ -7,6 +7,7 @@ export const light = {
     textRgba:"32,32,32",
 
     carouselColor: '#EEEDDE',
+    buttonpause: 'red',
 
     fontxs:'0.75em',
     fontsm:'0.875em',
@@ -29,6 +30,7 @@ export const dark = {
     textRgba:"255, 255, 255",
 
     carouselColor: '#EEEDDE',
+    buttonpause: '#fff',
 
     fontxs:'0.75em',
     fontsm:'0.875em',
