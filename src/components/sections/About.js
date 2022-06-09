@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Carousel from '../Carousel';
+import { ReactComponent as Heart } from '../../assets/heart-svg.svg';
 
 const Section = styled.section`
 min-height: 100vh;
@@ -11,7 +12,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
-
 
 `
 
@@ -90,14 +90,20 @@ margin: 1rem auto;
 @media (max-width: 54em){
   text-align: center;
 }  
+@media (max-width: 34em){
+  width: 100%;
+}  
 `
 
+
 function About() {
+  const messages = ["minha escolha sempre","love uuuu","Momentos incriveis com você","amo ficar na Rede com você","Eu, você e o Rodolfo","nosso Rolê na Praia","fazendo Caras e bocas","esse dia no parque Vila Lobos foi incrivel","Melhor pôr do sol é com meu amor","Te amo mil milhões"]
+  const [activeIndex , setActiveIndex] = useState(0)
   
   return ( 
   <Section id="about">
     <Container>
-      <Box><Carousel/></Box>
+      <Box><Carousel setActiveIndex={setActiveIndex}/></Box>
       <Box>
         <Title>
           Esses são nossos momentos
@@ -107,6 +113,9 @@ function About() {
         </SubTitle>
         <SubTitle>
           Feliz dia dos namorados!
+        </SubTitle>
+        <SubTitle>
+          {messages[activeIndex]} <Heart style={{ width: '20px', height: '15px' }} />
         </SubTitle>
       </Box>
     </Container>

@@ -94,15 +94,16 @@ const TextPhoto = styled.p`
     margin: 5px auto;
 `
 
-const Carousel = () => {
+const Carousel = ({setActiveIndex}) => {
 
   return (
     <Container> 
     <Swiper
     autoplay={{
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false
     }}
+    onSlideChange={(e) => setActiveIndex(e.activeIndex)}
     pagination={{
         type:'fraction'
     }}
@@ -111,16 +112,16 @@ const Carousel = () => {
     modules={[Pagination , Navigation, Autoplay, EffectCards]}
     className="mySwiper"
   >
-    <SwiperSlide> <img src={img1} alt="img-nossa" / > <TextPhoto>minha escolha <MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img2} alt="img-nossa" / > <TextPhoto>love uuuu<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img3} alt="img-nossa" / > <TextPhoto>Momentos<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img4} alt="img-nossa" / > <TextPhoto>Rede com você<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img5} alt="img-nossa" / > <TextPhoto>Eu,você e Rodolfo<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img6} alt="img-nossa" / > <TextPhoto>Praia<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img7} alt="img-nossa" / > <TextPhoto>Caras e bocas <MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img8} alt="img-nossa" / > <TextPhoto>parque Vila Lobos<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img9} alt="img-nossa" / > <TextPhoto>Melhor pôr do sol <MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
-    <SwiperSlide> <img src={img10} alt="img-nossa" / ><TextPhoto>Te amo mil milhoes<MenuToggle style={{ width: '20px', height: '15px' }} /></TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img1} alt="img-nossa" / > <TextPhoto>minha </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img2} alt="img-nossa" / > <TextPhoto>love uu </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img3} alt="img-nossa" / > <TextPhoto>Momentos </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img4} alt="img-nossa" / > <TextPhoto>Rede com você </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img5} alt="img-nossa" / > <TextPhoto>Eu,você e Rodolfo </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img6} alt="img-nossa" / > <TextPhoto>Praia </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img7} alt="img-nossa" / > <TextPhoto>Caras e bocas </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img8} alt="img-nossa" / > <TextPhoto>parque </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img9} alt="img-nossa" / > <TextPhoto>pôr do sol </TextPhoto></SwiperSlide>
+    <SwiperSlide> <img src={img10} alt="img-nossa" / ><TextPhoto>Te amo muito </TextPhoto></SwiperSlide>
   </Swiper>
   </Container>
   )

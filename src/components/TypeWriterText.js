@@ -114,6 +114,9 @@ const TypeWriterText = () => {
 
   return (
    <>
+   <SubTitle>
+    Bem vinda ao quadro digital
+    </SubTitle>
     <Title>
       aqui você poderá ver 
       <Typewriter
