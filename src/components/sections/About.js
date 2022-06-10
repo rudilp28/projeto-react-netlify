@@ -97,7 +97,7 @@ margin: 1rem auto;
 
 
 function About() {
-  const messages = ["minha escolha sempre","love uuuu","Momentos incriveis com você","amo ficar na Rede com você","Eu, você e o Rodolfo","nosso Rolê na Praia","fazendo Caras e bocas","esse dia no parque Vila Lobos foi incrivel","Melhor pôr do sol é com meu amor","Te amo mil milhões"]
+  const messages = ["minha escolha sempre","love uuuu","Momentos incríveis com você","amo ficar na Rede com você","Eu, você e o Rodolfo","nosso Rolê na Praia","fazendo Caras e bocas","esse dia no parque Vila Lobos foi incrível","Melhor pôr-do-sol é com meu amor","Te amo mil milhões"]
   const [activeIndex , setActiveIndex] = useState(0)
   
   return ( 
@@ -109,7 +109,7 @@ function About() {
           Esses são nossos momentos
         </Title>
         <SubTitle>
-          Meu amor , fiz esse quadro digital pra você poder ver quando voce quiser espero que goste Eu te Amo muito!
+          Meu amor , fiz esse quadro digital pra você poder ver quando quiser, espero que goste, Eu te Amo muito!
         </SubTitle>
         <SubTitle>
           Feliz dia dos namorados!

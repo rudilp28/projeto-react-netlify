@@ -170,7 +170,7 @@ const TypeWriterText = () => {
   return (
    <>
    <SubTitle>
-    Bem vinda ao quadro digital
+    Bem vinda ao quadro digital!
     </SubTitle>
     <Title>
       aqui você poderá ver 
@@ -194,10 +194,10 @@ const TypeWriterText = () => {
       />
     </Title>
     <SubTitle>
-    Arrasta pra paixo para saber mais!
+    Arrasta pra baixo para saber mais!
   </SubTitle>
   <ButtonContainer className='aqui'>
-    <ArrowButton onClick={() => {scrollTo('about') ; sound.play() }}>proceguir</ArrowButton>
+    <ArrowButton onClick={() => {scrollTo('about') ; sound.play() }}>prosseguir</ArrowButton>
     <PauseButton onClick={() => sound.pause() }><Pause style={{ width: '30px', height: '35px' }} /></PauseButton>
   </ButtonContainer>
   </>
